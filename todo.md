@@ -1,6 +1,6 @@
 Sprint 1:
 User Functionality
-/register 
+/signup 
 /login
 /logout
 
@@ -33,7 +33,7 @@ team_id       gamertag      name
 add players
 edits players
 
-/register 
+/signup 
 /login
 /logout
 
