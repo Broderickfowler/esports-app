@@ -26,8 +26,8 @@ team_id       gamertag      name
 
 
 /Teams/ => shows you your team
-/favorites/new
-/favorites/1 # show
+/teams/new
+/teams/1 # show
 
 /Teams/1/players #=> players resource
 add players
