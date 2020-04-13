@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_12_152436) do
+ActiveRecord::Schema.define(version: 2020_04_13_041054) do
+
+  create_table "players", force: :cascade do |t|
+    t.integer "team_id"
+    t.string "gamertag"
+    t.string "name"
+  end
 
   create_table "teams", force: :cascade do |t|
     t.integer "user_id"
