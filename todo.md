@@ -17,8 +17,8 @@ Teams
     has_many Players
 
 Teams
-id       gamertag       platform      user_id
-1        Deadlock          PC             1
+id       name       platform      user_id
+1       Flyers         PC             1
 
 Players
 team_id       gamertag      name   
