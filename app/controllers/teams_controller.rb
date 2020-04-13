@@ -40,4 +40,13 @@ class TeamsController < ApplicationController
          erb :"teams/show.html"
         end
     end
+
+    delete '/teams/:id' do
+        @team = current_user.teams.find(params[:id])
+        Team.destroy
+        redirect '/teams'
+    end
+    
 end
+
+#<a href="/teams/<%=@team.id%>/edit">Edit Team </a>
