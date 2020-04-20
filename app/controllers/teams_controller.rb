@@ -5,7 +5,8 @@ class TeamsController < ApplicationController
     
 
     get '/teams' do
-        @teams = current_user.teams
+        @user = current_user
+        @teams = @user.teams.all
          erb :"teams/index.html"
     end
 
@@ -42,11 +43,19 @@ class TeamsController < ApplicationController
     end
 
     delete '/teams/:id' do
-        @team = current_user.teams.find(params[:id])
-        Team.destroy
+        if logged_in?
+        @team = Team.find_by_id(params[:id])
+        if @team.user_id == session[:user_id]
+            erb :'/teams/show'
+        elsif
+             @team.user_id != session[:user_id]
         redirect '/teams'
+        end
+        else
+            flash[:message] = "Looks like you weren't logged in yet. Please log in below."
+      redirect to '/teams'
+        end
     end
-    
 end
 
 #<a href="/teams/<%=@team.id%>/edit">Edit Team </a>
