@@ -1,16 +1,33 @@
 <div class="container">
   <header></header>
   <div class="col-md-8 col-md-offset-2">
-    <h2>Esports</h2>
+    <img src="/images/Esports-small.png" class="welcome-image">
 
-    <div class="content">
-      <p>Welcome to Esports</p>
-      <span>Please sign in!</span>
-    </div>
+    <div class="row">
 
-    <div class="sidebar">
+      <div class="col"> 
+
+          <div class="card"> 
+            <p class="greeting">Welcome to Esports</p>
+
+        
+        
+         </div>
       
-    </div>
+      
+      </div>
 
-  </div>
+  <div class="main-card">
+     <p>Please sign in!</p>
+   <form class="main-card-form"action="/login" method="POST">
+       <p>Email: <input type="text" name="email" id="email"/></p>
+       <p>Password: <input type="password" name="password" id="password"/></p>
+       <input class="btn btn-primary" type="submit" value="Login">
+     </form>
+    </div>
+        </div>
+      </div>
+
+      <div>
+        <a href= "/signup">Create a new account</a> 
 </div>
