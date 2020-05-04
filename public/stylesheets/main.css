@@ -16,14 +16,17 @@
     background-image: url('/images/bg-cod.jpg');
      background-repeat: no-repeat;
      background-size: cover;
-    color: #333;
+    color: blanchedalmond;
     font-family: Sans-Serif;
     line-height: 18px;
   }
 
   .welcome-image{
     height: 50px;
-    
+  }
+
+  a {
+    color: blue;
   }
 
   .wrapper {
@@ -36,6 +39,10 @@
     padding: 2.25%; /* 18px / 800px */
     width: 85%;
 
+  }
+
+  .main-card{
+    text-align: center;
   }
 
   h1 {
@@ -90,7 +97,16 @@
     padding-top: 20px;
   }
 }
+/* -- login page styles -- */
+.login-form{
+  text-align: center;
+}
 
+
+  /* --- signup page styles --- */
+  .signup-form{
+    text-align: center;
+  }
 @media screen and (max-width: 600px) {
   .wrapper {
     -moz-box-shadow: none;
