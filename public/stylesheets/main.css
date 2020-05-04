@@ -41,9 +41,26 @@
 
   }
 
+  .card{
+    text-align: center;
+  }
+
   .main-card{
     text-align: center;
   }
+
+  .button {
+    padding:1em;
+    text-align: center;
+    display:inline-block;
+    text-decoration: none !important;
+    margin:0 auto;
+}
+
+.container{
+  width: 100%;
+  text-align: center;
+}
 
   h1 {
     font-size: 36px;

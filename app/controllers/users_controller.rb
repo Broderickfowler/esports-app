@@ -35,7 +35,7 @@ class UsersController < ApplicationController
     @user = User.find_by(:email => params[:email])
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
-            redirect '/'
+            redirect '/teams'
         else
             erb :'users/login.html'
         end
@@ -43,11 +43,9 @@ class UsersController < ApplicationController
 
    get '/logout' do
     if logged_in?
-       session.clear
+       session.destroy
        flash[:message] = "You have been logged out"
-       redirect :'users/login.html'
-    else
        redirect '/'
-    end
+        end
    end
 end
