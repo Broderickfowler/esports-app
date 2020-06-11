@@ -15,12 +15,29 @@
   </head>
   <body>
     <div class="wrapper">
+    <div class="container">
+      <%= "<div class='notice'>#{flash[:notice]}</div>" if 
+      flash[:notice] %>
+
+      <nav>
+        <% if logged_in? %>
+        Logged in as: <%= current_user.email %> |
+        <a href= "/teams">Teams</a>
+        <a href= "/teams/new">New Team</a>
+        <a href= "/logout">Logout</a>
+        <% else %>
+        <a href="/">Home</a> |
+        <a href= "/signup">Signup</a> |
+        <a href= "/login">Login</a>
+        <% end %>
+        </nav>
 
         <%= yield %>
 
       <footer class="branding">
         <small>&copy; 2020 <strong>EsportsApp</strong></small>
       </footer>
+      </div>
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
